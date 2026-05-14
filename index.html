@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAHYU_SUPREME_AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scanline"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <button onclick="toggleSidebar()" class="menu-btn">☰</button>
+        <div class="logo-text">SUPREME<span class="rgb-text">_AI</span></div>
+        <div id="clock">00:00:00</div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar-hidden">
+        <div class="sidebar-user">
+            <div class="avatar-glow">W</div>
+            <h4>WAHYU_SUPREME</h4>
+            <small class="status-online">● SYSTEM ACTIVE</small>
+        </div>
+        <div class="sidebar-menu">
+            <button onclick="quickCmd('/help')" class="side-item">📋 Menu Perintah</button>
+            <button onclick="quickCmd('/script')" class="side-item">📜 Script Hub</button>
+            <button onclick="quickCmd('/music')" class="side-item">🎵 Music ID</button>
+            <button onclick="hapusChat()" class="side-item" style="color: #ff4444;">🗑️ Hapus Chat</button>
+        </div>
+    </div>
+
+    <!-- Main Chat -->
+    <div class="app-container">
+        <div id="chat-box">
+            <div class="msg bot">Selamat datang, Tuan Wahyu. Sistem siap menerima instruksi eksekusi. ✨</div>
+        </div>
+
+        <div id="loader" class="hidden">
+            <div class="glitch" data-text="EXECUTING...">EXECUTING...</div>
+        </div>
+
+        <div class="input-section">
+            <div class="quick-access">
+                <button onclick="quickCmd('/logo')">Logo</button>
+                <button onclick="quickCmd('/script')">Script</button>
+                <button onclick="quickCmd('/website')">Web</button>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Minta sesuatu atau ketik /..." autocomplete="off">
+                <button id="send-btn">SEND</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
